@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Sudoku\ValueInterpreter;
 
-class SmailValueInterpreter implements ValueInterpreterInterface {
+class SmileEmojiValueInterpreter implements ValueInterpreterInterface {
     public function convertValue(int $value): string {
         return match ($value) {
             0 => ' ',

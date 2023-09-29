@@ -4,13 +4,13 @@ require 'vendor/autoload.php';
 use Sudoku\Printer\SudokuHtmlTablePrinter;
 use Sudoku\Sudoku;
 use Sudoku\ValueInterpreter\IntegerValueInterpreter;
-use Sudoku\ValueInterpreter\SmailValueInterpreter;
+use Sudoku\ValueInterpreter\SmileEmojiValueInterpreter;
 
 $boardSize = 9;
 $sudoku = new Sudoku($boardSize);
 $sudoku->generateValuesToBoard();
 $playableBoard = $sudoku->createPlayableBoard(50);
-$sudokuSmailPrinter = new SudokuHtmlTablePrinter(new SmailValueInterpreter());
+$sudokuSmileEmojiPrinter = new SudokuHtmlTablePrinter(new SmileEmojiValueInterpreter());
 $sudokuIntegerPrinter = new SudokuHtmlTablePrinter(new IntegerValueInterpreter());
 
 ?>
@@ -20,7 +20,7 @@ $sudokuIntegerPrinter = new SudokuHtmlTablePrinter(new IntegerValueInterpreter()
 <head>
     <title>Sudoku</title>
     <style>
-        <?php echo $sudokuSmailPrinter->getStyles();  ?>
+        <?php echo $sudokuSmileEmojiPrinter->getStyles();  ?>
         a {
             background-color: #67acff;
             color: white;
@@ -48,7 +48,7 @@ $sudokuIntegerPrinter = new SudokuHtmlTablePrinter(new IntegerValueInterpreter()
 <div style=" clear: both;"><a href=".">Generate sudoku</a> </div>
 <br><br>
 <?php
-$sudokuSmailPrinter->print($playableBoard);
+$sudokuSmileEmojiPrinter->print($playableBoard);
 $sudokuIntegerPrinter->print($playableBoard);
 ?>
 </body>
