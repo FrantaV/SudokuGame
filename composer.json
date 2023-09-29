@@ -1,0 +1,11 @@
+{
+  "autoload": {
+    "psr-4": {
+      "Sudoku\\": "src/"
+    }
+  },
+  "minimum-stability": "stable",
+  "require": {
+    "php": ">=8.1"
+  }
+}
